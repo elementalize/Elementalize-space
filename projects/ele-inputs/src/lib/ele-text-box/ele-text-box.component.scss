@@ -1,0 +1,131 @@
+.ele-input-main {
+    display: inline-flex;
+    width: 100%;
+    background-color: #181D27;
+    border: 2px solid #414651;
+    border-radius: 4px;
+    align-items: center;
+    &:hover {
+        background-color: #252B37;
+        .ele-input {
+            background-color: #252B37;
+        }
+    }
+    .ele-input {
+        width: 100%;
+        background-color: #181D27;
+        padding: 10px;
+        color: #A4A7AE;
+        border-radius: 4px;
+        border: none;
+        font-family: 'Inter', sans-serif;
+        &::placeholder{
+            color: #A4A7AE;
+        }
+        &:hover {
+            background-color: #252B37;
+        }
+    }
+    .ele-input-placeholder::placeholder {
+        opacity: 0;
+    }
+    &:focus-within {
+        border: 2px solid #535862;
+        background-color: #181D27;
+        .ele-input {
+            background-color: #181D27;
+            outline: none;
+        }
+        .ele-input-label {
+            transform: translate(7px, -18px) scale(.7);
+            background-color: #181d27;
+            padding: 0px 4px;
+        }
+    }
+    .ele-input:not(:placeholder-shown) + .ele-input-label {
+        transform: translate(7px, -18px) scale(.7);
+        background-color: #181d27;
+        padding: 0px 4px;
+    }
+    .ele-input-label {
+        position: absolute;
+        padding: 0px 0px 0px 9px;
+        font-size: 14px;
+        color: #A4A7AE;
+        font-family: 'Inter', sans-serif; 
+        transition: all 0.2s;
+        transform-origin: 0% 0%;
+        pointer-events: none;
+    }
+
+    .ele-tooltip-main {
+        position: relative;
+        height: 25px;
+        &:hover {
+            .ele-tooltip-content {
+                visibility: visible;
+            }
+        }
+        .ele-tooltip-content {
+            font-size: 14px;
+            visibility: hidden;
+            color: #a4a7ae;
+            background-color: #181d27;
+            width: max-content;
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #414651;
+            position: absolute;
+            z-index: 1;
+            right: 0;
+            font-family: Inter, sans-serif;
+            max-width: 250px;
+            position: absolute;
+            bottom: 28px;
+            &:hover {
+                visibility: visible;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                right: 10px;
+                border-width: 3px;
+                border-style: solid;
+                border-color: #181d27 transparent transparent transparent;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 100%;
+                right: 9px;
+                border-width: 4px;
+                border-style: solid;
+                border-color: #414651 transparent transparent transparent;
+            }
+        }
+    }
+}
+
+.ele-input-info-icon {
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.ele-input-error {
+    border: 2px solid #F04438;
+
+    .ele-input-info-icon {
+        path {
+            stroke: #F04438;
+        }
+    }
+}
+.ele-input-disabled {
+    opacity: 0.5;
+}
+.ele-input-error-text {
+    color: #F04438;
+    margin: 0px;
+    font-size: 14px;
+}
