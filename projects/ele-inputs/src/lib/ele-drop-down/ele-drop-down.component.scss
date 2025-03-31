@@ -2,6 +2,7 @@
     width: 100%;
     font-family: 'Inter', sans-serif;
     cursor: pointer;
+    position: relative;
     .ele-drop-down-con{
         background-color: #181D27;
         border: 2px solid #414651;
@@ -31,6 +32,8 @@
         background-color: #181D27;
         border: 2px solid #414651;
         border-radius: 4px;
+        position: absolute;
+        width: -webkit-fill-available;
         .ele-drop-down-search{
             display: flex;
             ::ng-deep {

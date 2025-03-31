@@ -35,6 +35,6 @@ In your Angular component HTML, you can use like this:
 ## License
 This library is licensed under the MIT License.
 
-This README contains an overview of how to install and use the `ele-text-box` component. It includes information on how to configure the component, handle events, and customize it according to your needs.
+This README contains an overview of how to install and use the `ele-inputs` component. It includes information on how to configure the component, handle events, and customize it according to your needs.
 
 Let me know if you'd like me to adjust any part of the file or if you need further changes!
